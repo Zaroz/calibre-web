@@ -196,7 +196,7 @@ class Identifiers(Base):
         elif format_type == "nuln":
             return u"https://www.novelupdates.com/series/{0}".format(self.val)
         else:
-            return u""
+            return u"{0}".format(self.val)
 
 
 class Comments(Base):
