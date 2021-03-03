@@ -125,8 +125,23 @@ class Identifiers(Base):
             return u"ISSN"
         elif format_type == "isfdb":
             return u"ISFDB"
+        elif format_type == "nu":
+            return u"NovelUpdates"
+        elif format_type == "nuwn":
+            return u"NovelUpdates WN Page"
+        elif format_type == "nuln":
+            return u"NovelUpdates LN Page"
+        elif format_type == "tl3":
+            return u"3rd Translator"
+        elif format_type == "tl1":
+            return u"1st Translator"
+        elif format_type == "tl2":
+            return u"2nd Translator"
+        elif format_type == "tl3":
+            return u"3rd Translator"
         if format_type == "lubimyczytac":
             return u"Lubimyczytac"
+
         else:
             return self.type
 
@@ -156,8 +171,30 @@ class Identifiers(Base):
             return u"https://portal.issn.org/resource/ISSN/{0}".format(self.val)
         elif format_type == "isfdb":
             return u"http://www.isfdb.org/cgi-bin/pl.cgi?{0}".format(self.val)
+        elif format_type == "uri":
+            return u"{0}".format(self.val)
         elif format_type == "url":
             return u"{0}".format(self.val)
+        elif format_type == "url1":
+            return u"{0}".format(self.val)
+        elif format_type == "url2":
+            return u"{0}".format(self.val)
+        elif format_type == "url3":
+            return u"{0}".format(self.val)
+        elif format_type == "tl":
+            return u"{0}".format(self.val)        
+        elif format_type == "tl1":
+            return u"{0}".format(self.val)
+        elif format_type == "tl2":
+            return u"{0}".format(self.val)
+        elif format_type == "tl3":
+            return u"{0}".format(self.val)
+        elif format_type == "nu":
+            return u"https://www.novelupdates.com/series/{0}".format(self.val)
+        elif format_type == "nuwn":
+            return u"https://www.novelupdates.com/series/{0}".format(self.val)
+        elif format_type == "nuln":
+            return u"https://www.novelupdates.com/series/{0}".format(self.val)
         else:
             return u""
 
